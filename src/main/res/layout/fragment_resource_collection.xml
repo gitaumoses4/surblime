@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.mg.surblime.ObservableViewModel" />
+
+        <import type="com.mg.surblime.ObservableRecyclerViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.mg.surblime.ObservableViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/items_none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{ (((ObservableRecyclerViewModel)viewModel).items.size() == 0 &amp;&amp; ((ObservableRecyclerViewModel)viewModel).emptyLayout == 0) ? View.VISIBLE : View.GONE  }"
+            bind:listener="@{ ((ObservableRecyclerViewModel)viewModel).onRefreshListener }"
+            bind:message="@{ ((ObservableRecyclerViewModel)viewModel).emptyMessage }" />
+
+        <FrameLayout
+            layout="@{ ((ObservableRecyclerViewModel)viewModel).emptyLayout }"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{ ((ObservableRecyclerViewModel)viewModel).items.size() == 0 &amp;&amp; ((ObservableRecyclerViewModel)viewModel).emptyLayout != 0 ? View.VISIBLE : View.GONE  }" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{ ((ObservableRecyclerViewModel)viewModel).items.size() == 0 ? View.GONE : View.VISIBLE  }"
+            app:adapter="@{ ((ObservableRecyclerViewModel)viewModel).getAdapter() }"
+            app:itemBinding="@{ ((ObservableRecyclerViewModel)viewModel).itemBinding }"
+            app:items="@{ ((ObservableRecyclerViewModel)viewModel).items }" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:visibility="@{  viewModel.status == ObservableRecyclerViewModel.LOADING_MORE ? View.VISIBLE : View.GONE }" />
+    </FrameLayout>
+</layout>

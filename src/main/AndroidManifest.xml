@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mg.surblime">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:fullBackupContent="true">
+        <service
+            android:name="com.evernote.android.job.gcm.PlatformGcmService"
+            android:enabled="true"
+
+            tools:replace="android:enabled" />
+    </application>
+</manifest>

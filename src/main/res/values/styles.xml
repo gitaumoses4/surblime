@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Surblime.ErrorField" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/md_red_500</item>
+        <item name="android:textColorSecondary">@color/md_red_500</item>
+        <item name="colorControlNormal">@color/md_red_500</item>
+        <item name="android:textColor">@color/md_red_500</item>
+    </style>
+
+    <style name="Surblime" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="iconPreferenceColor">?android:textColorSecondary</item>
+        <item name="editTextStyle">@style/Surblime.EditText</item>
+    </style>
+
+    <style name="Surblime.NoActionBar" parent="Surblime">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Surblime.Dark.NoActionBar" parent="Surblime.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Surblime.Dark" parent="Theme.AppCompat">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="iconPreferenceColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="STab">
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+        <item name="android:paddingLeft">@dimen/padding_large</item>
+        <item name="android:paddingRight">@dimen/padding_large</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Surblime.Button">
+
+    </style>
+
+    <style name="Surblime.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Surblime.Button.Transparent">
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:paddingLeft">@dimen/padding_medium</item>
+        <item name="android:paddingRight">@dimen/padding_medium</item>
+    </style>
+
+    <style name="Surblime.Button.Dialog" parent="Surblime.Button.Transparent">
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="Surblime.Clickable">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="Surblime.AppBarOverlay" parent="Base.ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorPrimary">@color/md_white_1000</item>
+    </style>
+
+    <style name="Surblime.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

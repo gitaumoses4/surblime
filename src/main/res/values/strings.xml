@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Surblime</string>
+
+    <string name="lorem">This snippet was too specific and it could not catch open keyboard events from EditText, it only worked if you opened and closed keyboard with provided functions and EditText opens keyboard as default behavior. Obviously this was a heavy shortcoming I did not notice before. So here it is my fix: The constructor of SoftKeyboard has been changed from:</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="empty">Hmm! Nothing here !?</string>
+    <string name="connection_error">Connection Error</string>
+    <string name="top_to_try_again">Tap to try again!</string>
+    <string name="not_now">Not Now</string>
+    <string name="_continue">Continue</string>
+    <string name="remove">Remove</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.mg.surblime.ObservableRecyclerViewModel" />
+
+        <import type="com.mg.surblime.ObservableViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.mg.surblime.ObservableViewModel" />
+
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                layout="@{ viewModel.errorLayout }"
+                refreshListener="@{ viewModel.onRefreshListener }"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="@{ viewModel.status == ObservableViewModel.ERROR ? View.VISIBLE : View.GONE}" />
+
+            <FrameLayout
+                layout="@{ viewModel.loadingLayout }"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_large"
+                android:visibility="@{ viewModel.status == ObservableViewModel.LOADING ? View.VISIBLE : View.GONE}" />
+
+            <include
+                android:id="@+id/viewModelView"
+                layout="@layout/empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="@{  viewModel.status == ObservableViewModel.SUCCESS || viewModel.status == ObservableRecyclerViewModel.LOADING_MORE ? View.VISIBLE : View.GONE }" />
+
+        </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

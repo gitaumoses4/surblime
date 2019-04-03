@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mikhaellopez.circularprogressbar.CircularProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cpb_background_progressbar_color="@color/transparent"
+    app:cpb_background_progressbar_width="2dp"
+    app:cpb_progress="20"
+    app:cpb_progressbar_color="?colorAccent" />
+

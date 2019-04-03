@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Surblime" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="editTextStyle">@style/Surblime.EditText</item>
+        <item name="iconPreferenceColor">?android:textColorSecondary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/md_white_1000</item>
+    </style>
+</resources>

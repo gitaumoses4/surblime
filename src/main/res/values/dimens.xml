@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="stab_center_margin">-1dp</dimen>
+    <dimen name="padding_tiny">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_extra_large">32dp</dimen>
+    <dimen name="margin_tiny">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_extra_large">32dp</dimen>
+    <dimen name="dialog_request_permission_header_height">100dp</dimen>
+    <dimen name="dialog_request_permission_icon_size">48dp</dimen>
+    <dimen name="one_dp">1dp</dimen>
+    <dimen name="preview_image">400dp</dimen>
+</resources>

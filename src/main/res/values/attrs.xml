@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="iconPreferenceColor" format="reference|color" />
+    <declare-styleable name="STabLayout">
+        <attr name="selectedTabBackgroundColor" format="color" />
+        <attr name="tabBackgroundColor" format="color" />
+        <attr name="selectedTabTextColor" format="color" />
+        <attr name="tabTextColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="SurblimeRadioButton">
+        <attr name="fieldValue" format="string" />
+    </declare-styleable>
+    <declare-styleable name="SurblimeLoadingButton">
+        <attr name="buttonBackground" format="color" />
+        <attr name="text" format="string" />
+        <attr name="loading" format="boolean" />
+        <attr name="disabled" format="boolean" />
+        <attr name="textColor" format="color" />
+        <attr name="progressBarColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="FormFieldLayout">
+        <attr name="horizontalPadding" format="dimension" />
+        <attr name="verticalPadding" format="dimension" />
+        <attr name="borderColor" format="color" />
+        <attr name="label" format="string" />
+        <attr name="labelTextColor" format="color" />
+        <attr name="error" format="string" />
+        <attr name="borderRight" format="boolean" />
+        <attr name="borderLeft" format="boolean" />
+        <attr name="borderTop" format="boolean" />
+        <attr name="borderBottom" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ImageInputField">
+        <attr name="imageWidth" format="dimension" />
+        <attr name="imageHeight" format="dimension" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="progressColor" format="color" />
+        <attr name="successColor" format="color" />
+        <attr name="maxImages" format="integer" />
+    </declare-styleable>
+</resources>
